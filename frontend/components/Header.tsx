@@ -21,11 +21,11 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
               <Phone size={14} />
-              <span>+233 XX XXX XXXX</span>
+              <span>+233(0) 544539852</span>
             </div>
             <div className="flex items-center gap-1">
               <Mail size={14} />
-              <span>info@pressurewashaccra.com</span>
+              <span>info@anapowercleaners.com</span>
             </div>
           </div>
           <div className="hidden md:block">
@@ -39,7 +39,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <h1 className="text-2xl font-bold text-blue-600">
-              PressureWash Pro
+              ANA Power Cleaners
             </h1>
           </div>
 

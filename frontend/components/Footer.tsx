@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold text-blue-400 mb-4">
-              PressureWash Pro
+              ANA Power Cleaners
             </h3>
             <p className="text-gray-300 mb-4">
               Professional pressure washing services for Greater Accra. 
@@ -70,11 +70,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-blue-400" />
-                <span className="text-gray-300">+233 XX XXX XXXX</span>
+                <span className="text-gray-300">+233(0) 544539852</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-blue-400" />
-                <span className="text-gray-300">info@pressurewashaccra.com</span>
+                <span className="text-gray-300">info@anapowercleaners.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={16} className="text-blue-400" />
@@ -84,8 +84,8 @@ export default function Footer() {
 
             <div className="mt-6 p-4 bg-gray-800 rounded-lg">
               <p className="text-sm text-gray-300">
-                <strong className="text-blue-400">24/7 Emergency Service</strong><br />
-                Available for urgent cleaning needs
+                <strong className="text-blue-400">Open 24 Hours</strong><br />
+                Available for all your cleaning needs
               </p>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm">
-              © {currentYear} PressureWash Pro. All rights reserved.
+              © {currentYear} ANA Power Cleaners. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400 mt-4 md:mt-0">
               <span className="hover:text-blue-400 transition-colors cursor-pointer">

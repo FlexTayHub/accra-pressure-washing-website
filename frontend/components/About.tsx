@@ -20,7 +20,7 @@ export default function About() {
     {
       icon: <Shield className="h-8 w-8 text-blue-600" />,
       number: "24/7",
-      label: "Emergency Service"
+      label: "Open 24 Hours"
     }
   ];
 
@@ -32,7 +32,7 @@ export default function About() {
           <div className="space-y-6">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose PressureWash Pro?
+                Why Choose ANA Power Cleaners?
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 We are Accra's premier pressure washing service, dedicated to 

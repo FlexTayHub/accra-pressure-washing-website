@@ -137,7 +137,7 @@ export default function Contact() {
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                        placeholder="+233 XX XXX XXXX"
+                        placeholder="+233(0) 544539852"
                       />
                     </div>
                     <div className="space-y-2">
@@ -260,14 +260,14 @@ export default function Contact() {
                   <Phone className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-medium text-gray-900">Call Us</p>
-                    <p className="text-gray-600">+233 XX XXX XXXX</p>
+                    <p className="text-gray-600">+233(0) 544539852</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-gray-600">info@pressurewashaccra.com</p>
+                    <p className="text-gray-600">info@anapowercleaners.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -281,8 +281,7 @@ export default function Contact() {
                   <Clock className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-medium text-gray-900">Hours</p>
-                    <p className="text-gray-600">Mon-Sat: 7AM-6PM</p>
-                    <p className="text-gray-600">Sun: Emergency only</p>
+                    <p className="text-gray-600">Open 24 hours a day</p>
                   </div>
                 </div>
               </CardContent>
