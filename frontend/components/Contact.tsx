@@ -267,7 +267,7 @@ export default function Contact() {
                   <Mail className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-gray-600">info@anapowercleaners.com</p>
+                    <p className="text-gray-600">ANAPowerCleaners@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
