@@ -83,32 +83,28 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Content - Stats */}
-          <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8">
-            <div className="grid grid-cols-2 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-3">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+          {/* Right Content - Professional Image */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/images/professional-worker.png" 
+                alt="Professional pressure washing service in Accra" 
+                className="w-full h-96 object-cover"
+              />
             </div>
-
-            <div className="mt-8 p-6 bg-white rounded-lg border border-blue-100">
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Our Commitment
-              </h3>
-              <p className="text-gray-600 text-sm">
-                We're committed to providing exceptional service that exceeds 
-                expectations. Every job comes with our 100% satisfaction guarantee.
-              </p>
+            
+            {/* Stats overlay */}
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-lg border border-blue-100">
+              <div className="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-blue-600">500+</div>
+                  <div className="text-xs text-gray-600">Happy Customers</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-blue-600">24/7</div>
+                  <div className="text-xs text-gray-600">Available</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -52,10 +52,10 @@ export default function Header() {
               Home
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection("gallery")}
               className="text-foreground hover:text-blue-600 transition-colors"
             >
-              Services
+              Gallery
             </button>
             <button
               onClick={() => scrollToSection("about")}
@@ -103,10 +103,10 @@ export default function Header() {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection("services")}
+                onClick={() => scrollToSection("gallery")}
                 className="text-left px-4 py-2 text-foreground hover:text-blue-600 transition-colors"
               >
-                Services
+                Gallery
               </button>
               <button
                 onClick={() => scrollToSection("about")}

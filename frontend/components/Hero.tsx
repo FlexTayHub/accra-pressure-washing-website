@@ -74,14 +74,14 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Content - Image/Visual */}
+          {/* Right Content - Before/After Images */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <div className="text-center text-blue-600">
-                <div className="text-6xl mb-4">🏠</div>
-                <p className="text-lg font-semibold">Professional Cleaning</p>
-                <p className="text-sm">Before & After Results</p>
-              </div>
+            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-6 h-96">
+              <img 
+                src="/images/steps-before-after.png" 
+                alt="Before and after pressure washing results" 
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
