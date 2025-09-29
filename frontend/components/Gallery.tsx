@@ -53,7 +53,7 @@ export default function Gallery() {
         </div>
 
         <div className="text-center mt-12">
-          <div className="bg-blue-600 text-white rounded-lg p-8 max-w-4xl mx-auto">
+          <div className="bg-red-600 text-white rounded-lg p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Transform Your Property?
             </h3>
@@ -67,7 +67,7 @@ export default function Gallery() {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Your Free Quote Today
             </button>

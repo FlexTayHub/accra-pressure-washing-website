@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
                 Professional{" "}
-                <span className="text-blue-600">Pressure Washing</span>{" "}
+                <span className="text-green-600">Pressure Washing</span>{" "}
                 Services in Accra
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
@@ -53,7 +53,7 @@ export default function Hero() {
               <Button
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3"
               >
                 Get Free Quote
                 <ArrowRight className="ml-2" size={20} />
@@ -61,7 +61,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3"
+                className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3"
                 onClick={() => {
                   const element = document.getElementById("services");
                   if (element) {
@@ -76,7 +76,7 @@ export default function Hero() {
 
           {/* Right Content - Before/After Images */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-6 h-96">
+            <div className="bg-gradient-to-br from-green-100 to-yellow-200 rounded-2xl p-6 h-96">
               <img 
                 src="/images/steps-before-after.png" 
                 alt="Before and after pressure washing results" 

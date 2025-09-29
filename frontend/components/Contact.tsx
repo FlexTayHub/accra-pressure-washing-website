@@ -239,7 +239,7 @@ export default function Contact() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Get Free Quote"}
@@ -257,28 +257,28 @@ export default function Contact() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-blue-600" />
+                  <Phone className="h-5 w-5 text-red-600" />
                   <div>
                     <p className="font-medium text-gray-900">Call Us</p>
                     <p className="text-gray-600">+233(0) 544539852</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-blue-600" />
+                  <Mail className="h-5 w-5 text-red-600" />
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <p className="text-gray-600">ANAPowerCleaners@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-blue-600" />
+                  <MapPin className="h-5 w-5 text-red-600" />
                   <div>
                     <p className="font-medium text-gray-900">Service Area</p>
                     <p className="text-gray-600">Greater Accra Region</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-blue-600" />
+                  <Clock className="h-5 w-5 text-red-600" />
                   <div>
                     <p className="font-medium text-gray-900">Hours</p>
                     <p className="text-gray-600">Open 24 hours a day</p>
@@ -292,19 +292,19 @@ export default function Contact() {
                 <h3 className="font-bold text-gray-900 mb-3">Why Choose Us?</h3>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                     Free estimates within 24 hours
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                     Licensed & insured professionals
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                     Eco-friendly cleaning solutions
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-red-600 rounded-full"></div>
                     100% satisfaction guarantee
                   </li>
                 </ul>

@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="bg-background border-b sticky top-0 z-50">
       {/* Top bar with contact info */}
-      <div className="bg-blue-600 text-white py-2">
+      <div className="bg-red-600 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
@@ -38,46 +38,48 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-blue-600">
-              ANA Power Cleaners
-            </h1>
+            <img 
+              src="/images/ana-logo.png" 
+              alt="ANA Power Cleaners" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-foreground hover:text-blue-600 transition-colors"
+              className="text-foreground hover:text-red-600 transition-colors"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("gallery")}
-              className="text-foreground hover:text-blue-600 transition-colors"
+              className="text-foreground hover:text-red-600 transition-colors"
             >
               Gallery
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-blue-600 transition-colors"
+              className="text-foreground hover:text-red-600 transition-colors"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("areas")}
-              className="text-foreground hover:text-blue-600 transition-colors"
+              className="text-foreground hover:text-red-600 transition-colors"
             >
               Service Areas
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-blue-600 transition-colors"
+              className="text-foreground hover:text-red-600 transition-colors"
             >
               Contact
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-red-600 hover:bg-red-700"
             >
               Get Quote
             </Button>
@@ -129,7 +131,7 @@ export default function Header() {
               <div className="px-4">
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  className="w-full bg-red-600 hover:bg-red-700"
                 >
                   Get Quote
                 </Button>

@@ -9,21 +9,23 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">
-              ANA Power Cleaners
-            </h3>
+            <img 
+              src="/images/ana-logo.png" 
+              alt="ANA Power Cleaners" 
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-gray-300 mb-4">
               Professional pressure washing services for Greater Accra. 
               Transforming properties with expert cleaning solutions.
             </p>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+              <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors cursor-pointer">
                 <Facebook size={16} />
               </div>
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+              <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors cursor-pointer">
                 <Instagram size={16} />
               </div>
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+              <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors cursor-pointer">
                 <Linkedin size={16} />
               </div>
             </div>
@@ -33,19 +35,19 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-gray-300">
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li className="hover:text-red-400 transition-colors cursor-pointer">
                 Residential Cleaning
               </li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li className="hover:text-red-400 transition-colors cursor-pointer">
                 Commercial Services
               </li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li className="hover:text-red-400 transition-colors cursor-pointer">
                 Vehicle Washing
               </li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li className="hover:text-red-400 transition-colors cursor-pointer">
                 Specialized Cleaning
               </li>
-              <li className="hover:text-blue-400 transition-colors cursor-pointer">
+              <li className="hover:text-red-400 transition-colors cursor-pointer">
                 Emergency Services
               </li>
             </ul>
@@ -69,22 +71,22 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Phone size={16} className="text-blue-400" />
+                <Phone size={16} className="text-red-400" />
                 <span className="text-gray-300">+233(0) 544539852</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail size={16} className="text-blue-400" />
+                <Mail size={16} className="text-red-400" />
                 <span className="text-gray-300">ANAPowerCleaners@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin size={16} className="text-blue-400" />
+                <MapPin size={16} className="text-red-400" />
                 <span className="text-gray-300">Greater Accra Region</span>
               </div>
             </div>
 
             <div className="mt-6 p-4 bg-gray-800 rounded-lg">
               <p className="text-sm text-gray-300">
-                <strong className="text-blue-400">Open 24 Hours</strong><br />
+                <strong className="text-red-400">Open 24 Hours</strong><br />
                 Available for all your cleaning needs
               </p>
             </div>
@@ -98,13 +100,13 @@ export default function Footer() {
               © {currentYear} ANA Power Cleaners. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400 mt-4 md:mt-0">
-              <span className="hover:text-blue-400 transition-colors cursor-pointer">
+              <span className="hover:text-red-400 transition-colors cursor-pointer">
                 Privacy Policy
               </span>
-              <span className="hover:text-blue-400 transition-colors cursor-pointer">
+              <span className="hover:text-red-400 transition-colors cursor-pointer">
                 Terms of Service
               </span>
-              <span className="hover:text-blue-400 transition-colors cursor-pointer">
+              <span className="hover:text-red-400 transition-colors cursor-pointer">
                 Licensing
               </span>
             </div>

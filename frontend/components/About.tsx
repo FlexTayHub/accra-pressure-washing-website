@@ -3,22 +3,22 @@ import { Shield, Award, Users, Clock } from "lucide-react";
 export default function About() {
   const stats = [
     {
-      icon: <Users className="h-8 w-8 text-blue-600" />,
+      icon: <Users className="h-8 w-8 text-red-600" />,
       number: "500+",
       label: "Happy Customers"
     },
     {
-      icon: <Clock className="h-8 w-8 text-blue-600" />,
+      icon: <Clock className="h-8 w-8 text-red-600" />,
       number: "5+",
       label: "Years Experience"
     },
     {
-      icon: <Award className="h-8 w-8 text-blue-600" />,
+      icon: <Award className="h-8 w-8 text-red-600" />,
       number: "100%",
       label: "Satisfaction Rate"
     },
     {
-      icon: <Shield className="h-8 w-8 text-blue-600" />,
+      icon: <Shield className="h-8 w-8 text-red-600" />,
       number: "24/7",
       label: "Open 24 Hours"
     }
@@ -43,7 +43,7 @@ export default function About() {
 
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <Shield className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                <Shield className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">
                     Licensed & Insured
@@ -56,7 +56,7 @@ export default function About() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Award className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                <Award className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">
                     Professional Equipment
@@ -69,7 +69,7 @@ export default function About() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Users className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                <Users className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">
                     Experienced Team
@@ -97,11 +97,11 @@ export default function About() {
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-lg border border-blue-100">
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">500+</div>
+                  <div className="text-2xl font-bold text-red-600">500+</div>
                   <div className="text-xs text-gray-600">Happy Customers</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">24/7</div>
+                  <div className="text-2xl font-bold text-red-600">24/7</div>
                   <div className="text-xs text-gray-600">Available</div>
                 </div>
               </div>
