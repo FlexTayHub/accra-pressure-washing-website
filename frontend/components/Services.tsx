@@ -1,92 +1,86 @@
-import { Home, Building, Car, Wrench } from "lucide-react";
+import { Building2, Car, Home, Sparkles, Store, Warehouse } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Services() {
   const services = [
     {
-      icon: <Home className="h-8 w-8 text-blue-600" />,
-      title: "Residential Cleaning",
-      description: "Complete exterior house washing, driveways, patios, and walkways",
-      features: ["House siding cleaning", "Driveway restoration", "Patio & deck cleaning", "Roof cleaning"],
-      price: "From GH₵200"
+      icon: <Building2 className="h-8 w-8 text-red-600" />,
+      title: "Commercial Properties",
+      description: "Exterior power cleaning for businesses and managed properties.",
+      features: ["Building exteriors", "Entrances & walkways", "Parking areas", "Scheduled maintenance"]
     },
     {
-      icon: <Building className="h-8 w-8 text-blue-600" />,
-      title: "Commercial Services",
-      description: "Professional cleaning for businesses, offices, and commercial properties",
-      features: ["Building facades", "Parking lots", "Storefronts", "Regular maintenance"],
-      price: "From GH₵500"
+      icon: <Home className="h-8 w-8 text-green-600" />,
+      title: "Homes & Compounds",
+      description: "Deep exterior cleaning that refreshes residential spaces.",
+      features: ["Compound floors", "Driveways", "Walls & gates", "Patios & walkways"]
     },
     {
-      icon: <Car className="h-8 w-8 text-blue-600" />,
-      title: "Vehicle Washing",
-      description: "Cars, trucks, boats, and recreational vehicles",
-      features: ["Car detailing", "Fleet washing", "Boat cleaning", "RV cleaning"],
-      price: "From GH₵50"
+      icon: <Store className="h-8 w-8 text-red-600" />,
+      title: "Storefronts & Hospitality",
+      description: "Keep customer-facing areas cleaner and more presentable.",
+      features: ["Storefronts", "Restaurants", "Hotels", "Churches & schools"]
     },
     {
-      icon: <Wrench className="h-8 w-8 text-blue-600" />,
-      title: "Specialized Cleaning",
-      description: "Graffiti removal, rust cleaning, and deep stain removal",
-      features: ["Graffiti removal", "Rust treatment", "Oil stain removal", "Mold & mildew"],
-      price: "Quote on request"
+      icon: <Car className="h-8 w-8 text-green-600" />,
+      title: "Fleet & Vehicle Washing",
+      description: "Mobile exterior washing for individual and business vehicles.",
+      features: ["Cars & SUVs", "Vans", "Commercial fleets", "Trucks"]
+    },
+    {
+      icon: <Warehouse className="h-8 w-8 text-red-600" />,
+      title: "Industrial & Large Areas",
+      description: "High-capacity cleaning for larger hard-surface jobs.",
+      features: ["Warehouses", "Loading areas", "Large paved surfaces", "Property turnovers"]
+    },
+    {
+      icon: <Sparkles className="h-8 w-8 text-green-600" />,
+      title: "Specialty Cleaning",
+      description: "Targeted cleaning for tough buildup and neglected surfaces.",
+      features: ["Mold & mildew", "Dirt buildup", "Stain treatment", "Surface restoration"]
     }
   ];
 
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
+          <p className="font-semibold text-red-600 mb-2">WHAT WE CLEAN</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Pressure Washing Services
+            Pressure Washing Built for Accra Properties
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Professional cleaning solutions for residential and commercial properties 
-            throughout Greater Accra
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            From a single compound to a recurring commercial account, we tailor the job to the surface, property, and cleaning frequency you need.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardHeader className="text-center pb-4">
-                <div className="flex justify-center mb-4">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-xl font-bold text-gray-900">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-gray-600">
-                  {service.description}
-                </CardDescription>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {services.map((service) => (
+            <Card key={service.title} className="bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+              <CardHeader>
+                <div className="mb-3">{service.icon}</div>
+                <CardTitle className="text-xl font-bold text-gray-900">{service.title}</CardTitle>
+                <CardDescription className="text-gray-600">{service.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center text-sm text-gray-600">
+                      <div className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="text-center pt-4 border-t">
-                  <span className="text-lg font-bold text-blue-600">{service.price}</span>
-                </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
-            All services include free estimates and satisfaction guarantee
+        <div className="mt-12 rounded-2xl bg-gray-900 px-6 py-8 text-center text-white">
+          <h3 className="text-2xl font-bold mb-2">Need recurring cleaning?</h3>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Ask about quarterly, semi-annual, or annual maintenance plans for businesses, compounds, and managed properties.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-            <span>✓ Licensed & Insured</span>
-            <span>✓ Eco-Friendly Products</span>
-            <span>✓ Same-Day Service</span>
-            <span>✓ Free Estimates</span>
-          </div>
         </div>
       </div>
     </section>
