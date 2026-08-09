@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail, Menu, MessageCircle, X } from "lucide-react";
+
+const WHATSAPP_URL =
+  "https://wa.me/233544539852?text=Hello%20ANA%20Power%20Cleaners%2C%20I%20would%20like%20a%20quote.";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,129 +15,78 @@ export default function Header() {
     }
   };
 
+  const navItems = [
+    ["Home", "home"],
+    ["Services", "services"],
+    ["Results", "gallery"],
+    ["About", "about"],
+    ["Service Areas", "areas"],
+    ["Contact", "contact"]
+  ];
+
   return (
-    <header className="bg-background border-b sticky top-0 z-50">
-      {/* Top bar with contact info */}
+    <header className="bg-white border-b sticky top-0 z-50 shadow-sm">
       <div className="bg-red-600 text-white py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <Phone size={14} />
-              <span>+233(0) 544539852</span>
-            </div>
-            <div className="flex items-center gap-1">
+        <div className="container mx-auto px-4 flex justify-between items-center gap-3 text-sm">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:underline">
+              <MessageCircle size={14} />
+              <span>WhatsApp +233 54 453 9852</span>
+            </a>
+            <a href="mailto:ANAPowerCleaners@gmail.com" className="hidden sm:flex items-center gap-1 hover:underline">
               <Mail size={14} />
               <span>ANAPowerCleaners@gmail.com</span>
-            </div>
+            </a>
           </div>
-          <div className="hidden md:block">
-            <span>Serving Greater Accra • Free Estimates</span>
-          </div>
+          <div className="hidden md:block">Serving Greater Accra • Free quote requests</div>
         </div>
       </div>
 
-      {/* Main navigation */}
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <img 
-              src="/images/ana-logo.png" 
-              alt="ANA Power Cleaners" 
-              className="h-12 w-auto"
-            />
-          </div>
+        <div className="flex items-center justify-between h-20">
+          <button onClick={() => scrollToSection("home")} aria-label="Go to homepage">
+            <img src="/images/ana-logo.png" alt="ANA Power Cleaners" className="h-14 w-auto" />
+          </button>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="text-foreground hover:text-red-600 transition-colors"
+          <nav className="hidden lg:flex items-center space-x-6">
+            {navItems.map(([label, id]) => (
+              <button key={id} onClick={() => scrollToSection(id)} className="text-gray-700 hover:text-red-600 transition-colors">
+                {label}
+              </button>
+            ))}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-5 text-sm font-medium text-white transition-colors hover:bg-green-700"
             >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("gallery")}
-              className="text-foreground hover:text-red-600 transition-colors"
-            >
-              Gallery
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-red-600 transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("areas")}
-              className="text-foreground hover:text-red-600 transition-colors"
-            >
-              Service Areas
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-red-600 transition-colors"
-            >
-              Contact
-            </button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-red-600 hover:bg-red-700"
-            >
+              <MessageCircle className="mr-2" size={18} />
               Get Quote
-            </Button>
+            </a>
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden p-2" aria-label="Toggle menu">
+            {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t bg-background">
-            <nav className="flex flex-col space-y-4 py-4">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-left px-4 py-2 text-foreground hover:text-blue-600 transition-colors"
+          <div className="lg:hidden border-t bg-white pb-5">
+            <nav className="flex flex-col py-3">
+              {navItems.map(([label, id]) => (
+                <button key={id} onClick={() => scrollToSection(id)} className="text-left px-2 py-3 text-gray-700 hover:text-red-600">
+                  {label}
+                </button>
+              ))}
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 inline-flex h-11 items-center justify-center rounded-md bg-green-600 px-5 text-sm font-medium text-white hover:bg-green-700"
               >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("gallery")}
-                className="text-left px-4 py-2 text-foreground hover:text-blue-600 transition-colors"
-              >
-                Gallery
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-left px-4 py-2 text-foreground hover:text-blue-600 transition-colors"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection("areas")}
-                className="text-left px-4 py-2 text-foreground hover:text-blue-600 transition-colors"
-              >
-                Service Areas
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-left px-4 py-2 text-foreground hover:text-blue-600 transition-colors"
-              >
-                Contact
-              </button>
-              <div className="px-4">
-                <Button
-                  onClick={() => scrollToSection("contact")}
-                  className="w-full bg-red-600 hover:bg-red-700"
-                >
-                  Get Quote
-                </Button>
-              </div>
+                <MessageCircle className="mr-2" size={18} />
+                WhatsApp for a Quote
+              </a>
             </nav>
           </div>
         )}

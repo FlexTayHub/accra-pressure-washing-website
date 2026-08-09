@@ -1,26 +1,26 @@
-import { Shield, Award, Users, Clock } from "lucide-react";
+import { CalendarCheck, Gauge, Handshake, Users } from "lucide-react";
 
 export default function About() {
-  const stats = [
+  const strengths = [
     {
-      icon: <Users className="h-8 w-8 text-red-600" />,
-      number: "500+",
-      label: "Happy Customers"
+      icon: <Gauge className="h-7 w-7 text-red-600" />,
+      title: "Commercial-Grade Equipment",
+      text: "Our pressure washing setup is built to handle residential compounds, storefronts, paved areas, and larger commercial jobs."
     },
     {
-      icon: <Clock className="h-8 w-8 text-red-600" />,
-      number: "5+",
-      label: "Years Experience"
+      icon: <Users className="h-7 w-7 text-green-600" />,
+      title: "Trained Local Team",
+      text: "Our technicians follow a structured process for setup, surface cleaning, safe operation, and site cleanup."
     },
     {
-      icon: <Award className="h-8 w-8 text-red-600" />,
-      number: "100%",
-      label: "Satisfaction Rate"
+      icon: <Handshake className="h-7 w-7 text-red-600" />,
+      title: "Demo-Friendly Sales Approach",
+      text: "For qualified commercial properties, we can discuss an on-site demonstration so your team can see the difference before considering ongoing work."
     },
     {
-      icon: <Shield className="h-8 w-8 text-red-600" />,
-      number: "24/7",
-      label: "Open 24 Hours"
+      icon: <CalendarCheck className="h-7 w-7 text-green-600" />,
+      title: "Maintenance Options",
+      text: "Recurring quarterly, semi-annual, and annual cleaning options are available based on property needs."
     }
   ];
 
@@ -28,83 +28,39 @@ export default function About() {
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
           <div className="space-y-6">
             <div>
+              <p className="font-semibold text-red-600 mb-2">WHY ANA POWER CLEANERS</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose ANA Power Cleaners?
+                More Than a Basic Cleaning Service
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We are Accra's premier pressure washing service, dedicated to 
-                transforming properties across Greater Accra with professional, 
-                eco-friendly cleaning solutions.
+                We focus on exterior pressure washing and power cleaning—the heavy-duty work that routine janitorial or housekeeping teams often are not equipped to handle. Our goal is simple: help properties across Greater Accra look cleaner, better maintained, and ready for customers, residents, and guests.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <Shield className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    Licensed & Insured
-                  </h3>
-                  <p className="text-gray-600">
-                    Fully licensed and insured for your peace of mind. 
-                    We carry comprehensive liability insurance.
-                  </p>
+            <div className="grid sm:grid-cols-2 gap-5">
+              {strengths.map((item) => (
+                <div key={item.title} className="rounded-xl border border-gray-100 p-5 shadow-sm">
+                  <div className="mb-3">{item.icon}</div>
+                  <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-gray-600">{item.text}</p>
                 </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Award className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    Professional Equipment
-                  </h3>
-                  <p className="text-gray-600">
-                    State-of-the-art pressure washing equipment and 
-                    eco-friendly cleaning solutions for optimal results.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Users className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    Experienced Team
-                  </h3>
-                  <p className="text-gray-600">
-                    Our trained professionals have years of experience 
-                    serving the Greater Accra community.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Right Content - Professional Image */}
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/images/professional-worker.png" 
-                alt="Professional pressure washing service in Accra" 
-                className="w-full h-96 object-cover"
+              <img
+                src="/images/professional-worker.png"
+                alt="ANA Power Cleaners pressure washing service"
+                className="w-full h-[460px] object-cover"
               />
             </div>
-            
-            {/* Stats overlay */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-lg border border-blue-100">
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-red-600">500+</div>
-                  <div className="text-xs text-gray-600">Happy Customers</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-red-600">24/7</div>
-                  <div className="text-xs text-gray-600">Available</div>
-                </div>
-              </div>
+            <div className="absolute -bottom-6 left-4 right-4 md:left-8 md:right-auto bg-gray-900 text-white rounded-xl p-5 shadow-lg md:max-w-xs">
+              <p className="font-bold text-lg mb-1">Commercial property manager?</p>
+              <p className="text-sm text-gray-300">Ask us about a site assessment, demonstration, and maintenance cleaning plan.</p>
             </div>
           </div>
         </div>
